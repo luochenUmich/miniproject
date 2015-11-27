@@ -247,8 +247,7 @@ save(fullfile('tmp', 'test32x32.mat'), 'testData32x32');
 %-------------------------------------------------------------------
 %       Your code here (replace the code when necessary)
 
-trainData32x32Normalized = zeros(nTrain, 32 * 32);
-% trainData32x32Normalized = normData(trainData32x32);
+trainData32x32Normalized = normData(trainData32x32);
 valData32x32Normalized = normData(valData32x32);
 testData32x32Normalized = normData(testData32x32);
 %--------------------------------------------------------------------
@@ -381,7 +380,7 @@ if exist(opts.expDir, 'dir') ~= 7, mkdir(opts.expDir); end
 % real-world practice.
 opts.learningRate = 1e-2;
 opts.batchSize = 128;
-opts.numEpochs = 1;
+opts.numEpochs = 30;
 
 %-------------------------------------------------------------------
 %       Your code here (replace the code when necessary)
